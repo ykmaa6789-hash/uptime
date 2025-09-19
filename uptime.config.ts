@@ -15,22 +15,22 @@ const workerConfig = { 
   kvWriteCooldownMinutes: 3,
   // Enable HTTP Basic auth for status page & API by uncommenting the line below, format `<USERNAME>:<PASSWORD>`  
   // passwordProtection: 'username:password',
-  // Define all your monitors here
+  // Define all your monitors here  
   monitors: [
     // Example HTTP Monitor
     {
-      // `id` should be unique, history will be kept if the `id` remains constant  
+      // `id` should be unique, history will be kept if the `id` remains constant    
       id: 'moontv',  
-      // `name` is used at status page and callback message
-      name: '博客',
-      // `method` should be a valid HTTP Method  
+      // `name` is used at status page and callback message  
+      name: 'moontv',
+      // `method` should be a valid HTTP Method    
       method: 'GET',
       // `target` is a valid URL
-      target: 'https://aawds88659-moontv.hf.space',  
-      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip  
-      tooltip: 'This is a tooltip for this monitor',  
+      target: 'https://huggingface.co/spaces/aawds88659/moontv',    
+      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip    
+      tooltip: 'This is a tooltip for this monitor',    
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page  
-      statusPageLink: 'https://aawds88659-moontv.hf.space',    
+      statusPageLink: 'https://huggingface.co/spaces/aawds88659/moontv',      
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx    
       // expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000  
@@ -40,24 +40,24 @@ const workerConfig = { 
       //   'User-Agent': 'Uptimeflare',
       //   Authorization: 'Bearer YOUR_TOKEN_HERE',
       // },
-      // [OPTIONAL] body to be sent
+      // [OPTIONAL] body to be sent  
       // body: 'Hello, world!',
       // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
       // responseKeyword: 'success',
       // [OPTIONAL] if specified, the check will run in your specified region,    
       // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
-      // checkLocationWorkerRoute: 'https://am.809098.xyz',
+      // checkLocationWorkerRoute: 'https://am.809098.xyz',    
     },
     // Example TCP Monitor
     {
-      id: 'moontv',    
+      id: 'moontv',      
       name: 'moontv',  
       // `method` should be `TCP_PING` for tcp monitors  
       method: 'GET',
       // `target` should be `host:port` for tcp monitors  
-      target: 'https://aawds88659-moontv.hf.space',  
-      tooltip: 'My production server monitor',    
-      statusPageLink: 'https://aawds88659-moontv.hf.space',  
+      target: 'https://huggingface.co/spaces/aawds88659/moontv',    
+      tooltip: 'My production server monitor',      
+      statusPageLink: 'https://huggingface.co/spaces/aawds88659/moontv',    
       timeout: 10000,
     },
   ],

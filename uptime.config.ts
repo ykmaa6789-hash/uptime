@@ -25,15 +25,15 @@ const workerConfig = { 
       name: 'moontv',
       // `method` should be a valid HTTP Method    
       method: 'GET',
-      // `target` is a valid URL
-      target: 'https://huggingface.co/spaces/aawds88659/moontv',    
+      // `target` is a valid URLhttps://aawds88659-moontv.hf.space
+      target: 'https://huggingface.co/spaces/aawds88659/moontv',      
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip    
       tooltip: 'This is a tooltip for this monitor',    
-      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page  
-      statusPageLink: 'https://huggingface.co/spaces/aawds88659/moontv',      
-      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx    
+      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page    
+      statusPageLink: 'https://aawds88659-moontv.hf.space',        
+      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx      
       // expectedCodes: [200],
-      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000  
+      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000    
       timeout: 10000,
       // [OPTIONAL] headers to be sent
       // headers: {
@@ -44,9 +44,9 @@ const workerConfig = { 
       // body: 'Hello, world!',
       // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
       // responseKeyword: 'success',
-      // [OPTIONAL] if specified, the check will run in your specified region,    
-      // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
-      // checkLocationWorkerRoute: 'https://am.809098.xyz',    
+      // [OPTIONAL] if specified, the check will run in your specified region,      
+      // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value  
+      // checkLocationWorkerRoute: 'https://am.809098.xyz',      
     },
     // Example TCP Monitor
     {
@@ -55,9 +55,9 @@ const workerConfig = { 
       // `method` should be `TCP_PING` for tcp monitors  
       method: 'GET',
       // `target` should be `host:port` for tcp monitors  
-      target: 'https://huggingface.co/spaces/aawds88659/moontv',    
-      tooltip: 'My production server monitor',      
-      statusPageLink: 'https://huggingface.co/spaces/aawds88659/moontv',    
+      target: 'https://aawds88659-moontv.hf.space',      
+      tooltip: 'My production server monitor',        
+      statusPageLink: 'https://aawds88659-moontv.hf.space',      
       timeout: 10000,
     },
   ],
@@ -66,7 +66,7 @@ const workerConfig = { 
     // if not specified, no notification will be sent
     appriseApiServer: "https://apprise.example.com/notify",
     // [Optional] recipient URL for apprise, refer to https://github.com/caronc/apprise
-    // if not specified, no notification will be sent
+    // if not specified, no notification will be sent  
     recipientUrl: "tgram://bottoken/ChatID",
     // [Optional] timezone used in notification messages, default to "Etc/GMT"
     timeZone: "Asia/Shanghai",

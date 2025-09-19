@@ -1,25 +1,25 @@
 const pageConfig = {
   // Title for your status page
-  title: "数字套利 •「AM科技」's Status Page",
-  // Links shown at the header of your status page, could set `highlight` to `true`
+  title: "数字套利 •「AM科技」's Status Page",  
+  // Links shown at the header of your status page, could set `highlight` to `true`  
   links: [
     { link: 'https://amclubss.com', label: '博客', highlight: true },
-    { link: 'https://809098.xyz', label: 'Blog'},
-    { link: 'https://youtube.com/@AM_CLUBS', label: 'YouTube' },
-    { link: 'https://github.com/amclubs', label: 'GitHub' }, 
+    { link: 'https://809098.xyz', label: 'Blog'},  
+    { link: 'https://youtube.com/@AM_CLUBS', label: 'YouTube' },    
+    { link: 'https://github.com/amclubs', label: 'GitHub' },     
   ],
 }
 
-const workerConfig = {
-  // Write KV at most every 3 minutes unless the status changed
+const workerConfig = {  
+  // Write KV at most every 3 minutes unless the status changed  
   kvWriteCooldownMinutes: 3,
-  // Enable HTTP Basic auth for status page & API by uncommenting the line below, format `<USERNAME>:<PASSWORD>`
+  // Enable HTTP Basic auth for status page & API by uncommenting the line below, format `<USERNAME>:<PASSWORD>`  
   // passwordProtection: 'username:password',
   // Define all your monitors here
   monitors: [
     // Example HTTP Monitor
     {
-      // `id` should be unique, history will be kept if the `id` remains constant
+      // `id` should be unique, history will be kept if the `id` remains constant  
       id: 'am.809098.xyz',
       // `name` is used at status page and callback message
       name: '博客',
@@ -30,8 +30,8 @@ const workerConfig = {
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
       tooltip: 'This is a tooltip for this monitor',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://am.809098.xyz',
-      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
+      statusPageLink: 'https://am.809098.xyz',  
+      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx  
       // expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
       timeout: 10000,
@@ -44,20 +44,20 @@ const workerConfig = {
       // body: 'Hello, world!',
       // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
       // responseKeyword: 'success',
-      // [OPTIONAL] if specified, the check will run in your specified region,
+      // [OPTIONAL] if specified, the check will run in your specified region,  
       // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
       // checkLocationWorkerRoute: 'https://am.809098.xyz',
     },
     // Example TCP Monitor
     {
-      id: '809098.xyz',
-      name: 'Blog',
-      // `method` should be `TCP_PING` for tcp monitors
+      id: 'moontv',  
+      name: 'moontv',  
+      // `method` should be `TCP_PING` for tcp monitors  
       method: 'GET',
-      // `target` should be `host:port` for tcp monitors
-      target: 'https://809098.xyz',
-      tooltip: 'My production server monitor',
-      statusPageLink: 'https://809098.xyz',
+      // `target` should be `host:port` for tcp monitors  
+      target: 'https://aawds88659-moontv.hf.space',  
+      tooltip: 'My production server monitor',  
+      statusPageLink: 'https://aawds88659-moontv.hf.space',  
       timeout: 10000,
     },
   ],
